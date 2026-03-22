@@ -19,8 +19,8 @@ def initialize_parameters_deep(layer_dims):
     l = len(layer_dims) # number of layers in the network
 
     for i in range(1, l):
-        parameters['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l - 1]) * 0.01
-        parameters['b' + str(l)] = np.zeros((layer_dims[l], 1))
+        parameters['W' + str(i)] = np.random.randn(layer_dims[i], layer_dims[i - 1]) * 0.01
+        parameters['b' + str(i)] = np.zeros((layer_dims[i], 1))
     
     return parameters
 
